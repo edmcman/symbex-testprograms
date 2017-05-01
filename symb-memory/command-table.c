@@ -17,7 +17,8 @@ int main(int argc, char *argv[]) {
 
   int found = 0;
   char buf[1024];
-  FILE *f = fopen("symb", "r");
+  assert (argv[1]);
+  FILE *f = fopen(argv[1], "r");
   assert (f);
 
   fread(buf, 1023, 1, f);
